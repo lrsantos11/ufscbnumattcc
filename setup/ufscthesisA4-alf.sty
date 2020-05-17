@@ -28,7 +28,7 @@
 % Pacotes básicos 
 % ---
 \RequirePackage[T1]{fontenc}		% Selecao de codigos de fonte.
-\RequirePackage{helvet}
+\RequirePackage{lmodern}
 \RequirePackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
 \RequirePackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção.
 \RequirePackage{color}				% Controle das cores
@@ -50,10 +50,7 @@ acronym,  % criação de acrônimos
 translate=babel, % Faz o papel de \providetranslation
 nopostdot  % Não é colocado ponto ao final da entrada
 ]{glossaries}
-% Fonte helvética (e euler para letras gregas) para matemática
-\renewcommand{\rmdefault}{phv}
-\RequirePackage[italic,defaultmathsizes,eulergreek]{mathastext}
-\RequirePackage{amsmath}
+\RequirePackage{amsmath,mathtools}
 \RequirePackage{bm}
 % ---
 
@@ -75,7 +72,7 @@ nopostdot  % Não é colocado ponto ao final da entrada
 	inseries     = {\mkbibemph{In}}
 }
 
-% Ajusta citação do mesmo autor e ano (repete ano junto com etiqueta, ao contratio de somente apresentar etiqueta)
+% Ajusta citação do mesmo autor e ano (repete ano junto com etiqueta, ao contrario de somente apresentar etiqueta)
 \renewbibmacro*{cite}{% >>>3
 \iffieldundef{shorthand}%
 {\ifthenelse{\ifnameundef{labelname}\OR\iffieldundef{labelyear}}%
@@ -115,7 +112,7 @@ nopostdot  % Não é colocado ponto ao final da entrada
 \DeclareMathAccent{\wideparen}{\mathord}{largesymbols}{"F3} 
 
 % Ajuste do tamanho das fontes matemáticas
-\DeclareMathSizes{12}{12}{10}{7}
+% \DeclareMathSizes{12}{12}{10}{7}
 
 % Retira o espaço do pacote glossaries
 \renewcommand{\glossarypreamble}{\vspace{-0.2cm}} 
@@ -182,7 +179,7 @@ nopostdot  % Não é colocado ponto ao final da entrada
 	]
 }
 
-% Faz SECTION maíusculo inclusive no sumário
+% Faz SECTION maiúsculo inclusive no sumário
 \makeatletter
 \let\oldcontentsline\contentsline
 \def\contentsline#1#2{%
@@ -298,7 +295,7 @@ nopostdot  % Não é colocado ponto ao final da entrada
 % --- 
 % Fonte padrão utilizada no texto
 %%\renewcommand{\normalsize}{\fontsize{12pt}{16pt}\selectfont}
-\renewcommand{\familydefault}{\sfdefault}
+% \renewcommand{\familydefault}{\sfdefault}
 % Fontes padroes de part, chapter, section, subsection e subsubsection
 \renewcommand{\ABNTEXchapterfont}{\sffamily\fontseries{bx}\fontshape{n}\selectfont}
 \renewcommand{\ABNTEXchapterfontsize}{\normalsize\selectfont}
