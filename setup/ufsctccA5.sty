@@ -53,6 +53,8 @@ nopostdot  % Não é colocado ponto ao final da entrada
 ]{glossaries}
 \RequirePackage{amsmath,mathtools}
 \RequirePackage{bm}
+\RequirePackage{geometry}
+\geometry{a5paper, inner=2.5cm, outer=1.75cm, top=2.5cm,bottom=2.5cm}
 % ---
 
 % ---
@@ -218,6 +220,11 @@ nopostdot  % Não é colocado ponto ao final da entrada
 \newcommand{\curso}[1]{\renewcommand{\imprimircurso}{#1}}
 
 
+\providecommand{\imprimirdepartamento}{}
+\newcommand{\departamento}[1]{\renewcommand{\imprimirdepartamento}{#1}}
+
+
+
 \providecommand{\imprimirprograma}{}
 \newcommand{\programa}[1]{\renewcommand{\imprimirprograma}{#1}}
 
@@ -292,7 +299,7 @@ nopostdot  % Não é colocado ponto ao final da entrada
 % Espaçamentos entre linhas e parágrafos 
 % --- 
 % O tamanho do parágrafo é dado por:
-\setlength{\parindent}{1.25cm}
+\setlength{\parindent}{1cm}
 % Controle do espaçamento entre um parágrafo e outro:
 \setlength{\parskip}{0.0cm}  % tente também \onelineskip
 % Espaçamento depois do título
@@ -399,7 +406,7 @@ nopostdot  % Não é colocado ponto ao final da entrada
 	\vspace*{\fill}
 	%\vspace*{5cm}%4
 	\abntex@ifnotempty{\imprimirpreambulo}{%
-		\begin{adjustwidth*}{4cm}{}%8.5              
+		\begin{adjustwidth*}{5cm}{}%8.5              
 			%\SingleSpacing
 			{\footnotesize
 				\begin{SingleSpace}

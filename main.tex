@@ -17,7 +17,7 @@
 \documentclass[
 	% -- opções da classe memoir --
 	10pt,				% tamanho da fonte
-	%openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
+	% openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
 	oneside,			% para impressão no anverso. Oposto a twoside
 	a5paper,			% tamanho do papel. 
 	% -- opções da classe abntex2 --
@@ -36,43 +36,6 @@
 \addbibresource{aftertext/references.bib} % Seus arquivos de referências
 
 % ---
-% Filtering and Mapping Bibliographies
-% ---
-\DeclareSourcemap{
-	\maps[datatype=bibtex]{
-		% remove fields that are always useless
-		\map{
-			\step[fieldset=abstract, null]
-			\step[fieldset=pagetotal, null]
-		}
-		% remove URLs for types that are primarily printed
-%		\map{
-%			\pernottype{software}
-%			\pernottype{online}
-%			\pernottype{report}
-%			\pernottype{techreport}
-%			\pernottype{standard}
-%			\pernottype{manual}
-%			\pernottype{misc}
-%			\step[fieldset=url, null]
-%			\step[fieldset=urldate, null]
-%		}
-		\map{
-			\pertype{inproceedings}
-			% remove mostly redundant conference information
-			\step[fieldset=venue, null]
-			\step[fieldset=eventdate, null]
-			\step[fieldset=eventtitle, null]
-			% do not show ISBN for proceedings
-			\step[fieldset=isbn, null]
-			% Citavi bug
-			\step[fieldset=volume, null]
-		}
-	}
-}
-% ---
-
-% ---
 % Informações de dados para CAPA e FOLHA DE ROSTO
 % ---
 % FIXME Substituir 'Nome completo do autor' pelo seu nome.
@@ -89,7 +52,7 @@
 % \orientador[Orientadora]{Nome da orientadora, Dra.}
 % FIXME Substituir 'XXXXXX' pelo nome do seu
 % coorientador. Caso não tenha coorientador, comente a linha a seguir.
-\coorientador{Prof. XXXXXX, Dr.}
+% \coorientador{Prof. XXXXXX, Dr.}
 % FIXME Se for coorientado por uma mulher, comente a linha acima e descomente a linha a seguir.
 % \coorientador[Coorientadora]{XXXXXX, Dra.}
 % FIXME Substituir '[ano]' pelo ano (ano) em que seu trabalho foi defendido.
@@ -108,10 +71,10 @@
 % FIXME Substituir 'Programa de Pós-Graduação em XXXXXX' pela curso adequado.
 \curso{Licenciatura em Matemática}
 % FIXME Substituir 'Campus XXXXXX ou Centro de XXXXXX' pelo campus ou centro adequado.
-\centro{Centro Tecnológico, de Ciências Exatas e Educação -- Campus Blumenau}
+\centro{Centro Tecnológico, de Ciências Exatas e Educação}
 \preambulo
 {%
-\imprimirtipotrabalho~em~\imprimircurso~do~\imprimircentro~da~\imprimirinstituicao~para~a~obtenção~do~título~de~\imprimirformacao.
+\imprimirtipotrabalho~em~\imprimircurso~do \imprimircentro~da \imprimirinstituicao~para a~obtenção~do~título~de~\imprimirformacao.
 }
 % ---
 
