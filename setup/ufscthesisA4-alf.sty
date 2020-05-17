@@ -30,6 +30,7 @@
 \RequirePackage[T1]{fontenc}		% Selecao de codigos de fonte.
 \RequirePackage{lmodern}
 \RequirePackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
+\RequirePackage{hyperref}
 \RequirePackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção.
 \RequirePackage{color}				% Controle das cores
 \RequirePackage{graphicx}			% Inclusão de gráficos
@@ -57,20 +58,26 @@ nopostdot  % Não é colocado ponto ao final da entrada
 % ---
 % Pacotes de citações
 % ---
-\RequirePackage[backend=biber,style=abnt,repeatfields,maxbibnames=9,maxcitenames=2,uniquelist=false, uniquename=full,extrayear]{biblatex}
+% FIXME Para uso da classe ABNT para citações descomente até a linha 70
+% \RequirePackage[backend=biber,style=abnt,repeatfields,maxbibnames=9,maxcitenames=2,uniquelist=false, uniquename=full,extrayear]{biblatex}
+% % Ajusta textos
+% \DefineBibliographyStrings{brazil}{%
+% 	sineloco     = {\mkbibemph{S\adddot l\adddot}},%
+% 	sinenomine   = {\mkbibemph{s\adddot n\adddot}},%
+% 	andothers    = {\mkbibemph{et\addabbrvspace al\adddot}},%
+% 	involumes    = {\mkbibemph{In}},%
+% 	in           = {\mkbibemph{In}},%
+% 	inseries     = {\mkbibemph{In}}
+% }
+
+% FIXME Para uso da classe ABNT para citações descomente até a linha abaixo
+\RequirePackage[backend=biber,style=numeric-comp,maxbibnames=9,maxcitenames=2,uniquelist=false, uniquename=full]{biblatex}
+
 \RequirePackage{url}
+\DeclareFieldFormat{url}{\bibstring{urlfrom}\addcolon\addspace\url{#1}}
 % Ajusta espaçamento entre referências
 \setlength\bibitemsep{\baselineskip}
-% Ajusta textos
-\DeclareFieldFormat{url}{\bibstring{urlfrom}\addcolon\addspace\url{#1}}
-\DefineBibliographyStrings{brazil}{%
-	sineloco     = {\mkbibemph{S\adddot l\adddot}},%
-	sinenomine   = {\mkbibemph{s\adddot n\adddot}},%
-	andothers    = {\mkbibemph{et\addabbrvspace al\adddot}},%
-	involumes    = {\mkbibemph{In}},%
-	in           = {\mkbibemph{In}},%
-	inseries     = {\mkbibemph{In}}
-}
+
 
 % Ajusta citação do mesmo autor e ano (repete ano junto com etiqueta, ao contrario de somente apresentar etiqueta)
 \renewbibmacro*{cite}{% >>>3
@@ -108,8 +115,8 @@ nopostdot  % Não é colocado ponto ao final da entrada
 % CONFIGURAÇÕES DE PACOTES
 % --- 
 % Fix large symbols 
-\DeclareSymbolFont{largesymbols}{OMX}{helvet}{m}{n}
-\DeclareMathAccent{\wideparen}{\mathord}{largesymbols}{"F3} 
+% \DeclareSymbolFont{largesymbols}{OMX}{helvet}{m}{n}
+% \DeclareMathAccent{\wideparen}{\mathord}{largesymbols}{"F3} 
 
 % Ajuste do tamanho das fontes matemáticas
 % \DeclareMathSizes{12}{12}{10}{7}
