@@ -207,6 +207,10 @@ nopostdot  % Não é colocado ponto ao final da entrada
 \providecommand{\imprimirsubtitulo}{}
 \newcommand{\subtitulo}[1]{\renewcommand{\imprimirsubtitulo}{#1}}
 
+\providecommand{\imprimircurso}{}
+\newcommand{\curso}[1]{\renewcommand{\imprimircurso}{#1}}
+
+
 \providecommand{\imprimirprograma}{}
 \newcommand{\programa}[1]{\renewcommand{\imprimirprograma}{#1}}
 
@@ -347,11 +351,11 @@ nopostdot  % Não é colocado ponto ao final da entrada
 		\centering   
 		%\vspace*{\baselineskip}
 		%\vbox to 12cm{%
-		\includegraphics[width=1.84cm,keepaspectratio]{setup/vertical_sigla_fundo_claro.pdf}\par%     
+		% \includegraphics[width=1.84cm,keepaspectratio]{setup/vertical_sigla_fundo_claro.pdf}\par%     
 		%\large
 		\MakeTextUppercase{\imprimirinstituicao}\par%
 		\MakeTextUppercase{\imprimircentro}\par%
-		\MakeTextUppercase{\imprimirprograma}\par%
+		\MakeTextUppercase{\imprimircurso}\par%
 		%\vfill
 		\vspace*{5\baselineskip}
 		\imprimirautor\par%
@@ -379,7 +383,7 @@ nopostdot  % Não é colocado ponto ao final da entrada
 {%
 	\OnehalfSpacing
 	\centering   
-	\vbox to 10cm{%12
+	\vbox to 8\baselineskip{%12
 		\imprimirautor\par% 
 		\vspace*{\fill}
 		\textbf{\imprimirtitulo}%
@@ -388,7 +392,7 @@ nopostdot  % Não é colocado ponto ao final da entrada
 	\vspace*{\fill}
 	%\vspace*{5cm}%4
 	\abntex@ifnotempty{\imprimirpreambulo}{%
-		\begin{adjustwidth*}{8cm}{}%8.5              
+		\begin{adjustwidth*}{4cm}{}%8.5              
 			%\SingleSpacing
 			{\footnotesize
 				\begin{SingleSpace}

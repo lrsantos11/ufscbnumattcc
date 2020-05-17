@@ -18,7 +18,7 @@
 	% -- opções da classe memoir --
 	10pt,				% tamanho da fonte
 	%openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
-	twoside,			% para impressão no anverso. Oposto a twoside
+	oneside,			% para impressão no anverso. Oposto a twoside
 	a5paper,			% tamanho do papel. 
 	% -- opções da classe abntex2 --
 	chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
@@ -93,26 +93,25 @@
 % FIXME Se for coorientado por uma mulher, comente a linha acima e descomente a linha a seguir.
 % \coorientador[Coorientadora]{XXXXXX, Dra.}
 % FIXME Substituir '[ano]' pelo ano (ano) em que seu trabalho foi defendido.
-\ano{ano}
+\ano{[ano da entrega]}
 % FIXME Substituir '[dia] de [mês] de [ano]' pela data em que ocorreu sua defesa.
-%\data{[dia] de [mês] de [ano]}
+\data{[dia] de [mês] de [ano]}
 % FIXME Substituir 'Local' pela cidade em que ocorreu sua defesa.
-\local{Local}
+\local{[Cidade da defesa]}
 \instituicaosigla{UFSC}
 \instituicao{Universidade Federal de Santa Catarina}
-% FIXME Substituir 'Dissertação/Tese' pelo tipo de trabalho (Tese, Dissertação). 
-\tipotrabalho{Dissertação/Tese}
-% FIXME Substituir '[mestre/doutor] em XXXXXX' pela grau adequado.
-\formacao{[mestre/doutor] em [nome do título obtido pelo Programa]}
-% FIXME Substituir '[mestrado/doutorado]' pelo nivel adequado.
-\nivel{[mestrado/doutorado]}
+
+\tipotrabalho{Trabalho de Conclusão de Curso de Graduação}
+% FIXME Substituir 'Licenciado(a)' pela grau adequado.
+\formacao{Licenciado(a) em Matemática}
+\nivel{Graduação}
 % FIXME Substituir 'Programa de Pós-Graduação em XXXXXX' pela curso adequado.
-\programa{Programa de Pós-Graduação em XXXXXX}
+\curso{Licenciatura em Matemática}
 % FIXME Substituir 'Campus XXXXXX ou Centro de XXXXXX' pelo campus ou centro adequado.
-\centro{Campus XXXXXX ou Centro de XXXXXX}
+\centro{Centro de Tecnologia, Ciências Exatas e Educação -- Campus Blumenau}
 \preambulo
 {%
-\imprimirtipotrabalho~submetida~ao~\imprimirprograma~da~\imprimirinstituicao~para~a~obtenção~do~título~de~\imprimirformacao.
+\imprimirtipotrabalho~em~\imprimircurso~do~\imprimircentro~da~\imprimirinstituicao~para~a~obtenção~do~título~de~\imprimirformacao.
 }
 % ---
 
